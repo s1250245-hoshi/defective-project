@@ -5,4 +5,18 @@
 # 15        // sum
 
 def complex_sum(n, arr)
+
+  sum = 0
+  if arr.empty?
+    0
+  else    
+    head, *tail = arr
+    if head%2==1
+      head + n + complex_sum(n, tail)
+    else
+      complex_sum(n, tail)
+    end
+
+  end
+
 end
